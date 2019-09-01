@@ -22,39 +22,74 @@ intro
     })
 
 //dot animation
+if (window.innerWidth > 800) {
+    anime({
+        targets: '.dot',
+        scale: 40,
+        duration: 1300,
+        delay: 900,
+        direction: 'alternate',
+        loop: true
+    })
+    anime({
+        targets: '.dot2',
+        scale: 20,
+        duration: 1300,
+        delay: 500,
+        direction: 'alternate',
+        loop: true
+    })
+    anime({
+        targets: '.dot3',
+        scale: 15,
+        duration: 1300,
+        delay: 200,
+        direction: 'alternate',
+        loop: true
+    })
+    anime({
+        targets: '.dot4',
+        scale: 21,
+        duration: 1300,
+        delay: 200,
+        direction: 'alternate',
+        loop: true
+    })
+} else {
+    anime({
+        targets: '.dot',
+        scale: 6,
+        duration: 1300,
+        delay: 900,
+        direction: 'alternate',
+        loop: true
+    })
+    anime({
+        targets: '.dot2',
+        scale: 5,
+        duration: 1300,
+        delay: 500,
+        direction: 'alternate',
+        loop: true
+    })
+    anime({
+        targets: '.dot3',
+        scale: 6,
+        duration: 1300,
+        delay: 200,
+        direction: 'alternate',
+        loop: true
+    })
+    anime({
+        targets: '.dot4',
+        scale: 7,
+        duration: 1300,
+        delay: 200,
+        direction: 'alternate',
+        loop: true
+    })
+}
 
-anime({
-    targets: '.dot',
-    scale: 40,
-    duration: 1300,
-    delay: 900,
-    direction: 'alternate',
-    loop: true
-})
-anime({
-    targets: '.dot2',
-    scale: 20,
-    duration: 1300,
-    delay: 500,
-    direction: 'alternate',
-    loop: true
-})
-anime({
-    targets: '.dot3',
-    scale: 15,
-    duration: 1300,
-    delay: 200,
-    direction: 'alternate',
-    loop: true
-})
-anime({
-    targets: '.dot4',
-    scale: 21,
-    duration: 1300,
-    delay: 200,
-    direction: 'alternate',
-    loop: true
-})
 
 // Wrap every letter in a span
 var textWrapper = document.querySelector('.ml16');

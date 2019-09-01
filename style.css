@@ -1,3 +1,15 @@
+@font-face {
+    font-family: ONEDAY;
+    src: url('./fonts/ONEDAY.ttf');
+    src: url('./fonts//ONEDAY.otf');
+}
+
+@font-face {
+    font-family: ABOVEDEMO;
+    src: url('./fonts/AboveDemoRegular-lJMd.ttf');
+
+}
+
 html,
 body {
     padding: 0;
@@ -74,7 +86,7 @@ body {
     color: rgb(255, 255, 255);
     padding: 40px 0;
     font-weight: 600;
-    font-family: 'Righteous', cursive;
+    font-family: 'ONEDAY', cursive;
     font-size: 4em;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -105,8 +117,8 @@ body {
 .ml18 {
     color: rgb(255, 255, 255);
     padding: 40px 0;
-    font-weight: 600;
-    font-family: 'Righteous', cursive;
+    font-weight: 200;
+    font-family: 'Teko', sans-serif;
     font-size: 1.3em;
     text-transform: uppercase;
     letter-spacing: 1em;
@@ -127,7 +139,7 @@ body {
 .title-pos2 {
     position: absolute;
     top: 20%;
-    right: 6.9%;
+    right: 6%;
 }
 
 .title-pos3 {
@@ -154,6 +166,18 @@ body {
 
 }
 
+.dev {
+    font-family: Righteous;
+    font-weight: 200;
+    letter-spacing: 0.2em;
+    position: absolute;
+    bottom: -2%;
+    font-size: 0.7em;
+    right: -1%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+}
+
 
 @keyframes mymove {
     0% {
@@ -166,5 +190,94 @@ body {
 
     100% {
         top: 1020px;
+    }
+}
+
+
+@media (max-width: 800px) {
+    .cloud {
+        max-width: 100px;
+        left: -50%;
+        bottom: -105%;
+    }
+
+    .cloud2 {
+        max-width: 100px;
+        left: -190%;
+        top: 90%;
+    }
+
+    .bulb img {
+        width: 200px;
+        left: 20%;
+        margin-top: 200px;
+        animation: mymove infinite alternate 5s;
+    }
+
+    .ml16 {
+        font-size: 1.4em;
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        letter-spacing: 0.2em;
+    }
+
+    .title-pos {
+        left: 11%;
+        top: 220px;
+    }
+
+    .ml17 {
+        font-size: 0.6em;
+        top: 265px;
+        letter-spacing: 1.2em;
+        font-weight: 200;
+        text-align: center;
+        left: 20%;
+
+    }
+
+    .ml18 {
+        font-weight: 200;
+        font-size: 0.9em;
+        letter-spacing: 1em;
+        left: 25%;
+        letter-spacing: 0.2em;
+        text-align: center;
+        top: 330px;
+    }
+
+    .text {
+        position: relative;
+        top: -55%;
+        left: -5%;
+    }
+
+    .social-icons {
+        position: absolute;
+        top: 65%;
+        right: -22%;
+    }
+
+    .social-icons>* {
+        color: #fff;
+    }
+
+    .dev {
+        display: none;
+    }
+}
+
+@keyframes mymoveS {
+    0% {
+        top: 1190px !important;
+    }
+
+    50% {
+        top: 1200px !important;
+    }
+
+    100% {
+        top: 1190px !important;
     }
 }
