@@ -1,288 +1,152 @@
-@font-face {
-    font-family: ONEDAY;
-    src: url('./fonts/ONEDAY.ttf');
-    src: url('./fonts//ONEDAY.otf');
-}
-
-@font-face {
-    font-family: ABOVEDEMO;
-    src: url('./fonts/AboveDemoRegular-lJMd.ttf');
-
-}
-
 html,
 body {
-    padding: 0;
     margin: 0;
+    padding: 0;
+    background: #0c0c0c;
+    font-family: 'Droid Sans Mono';
+    color: white;
     overflow: hidden;
+}
+
+
+
+.overlay {
+    animation: grain 1.6s steps(10) infinite;
+    background-image: url('./grains.png');
+    height: 300%;
+    left: -50%;
+    opacity: 0.6;
+    position: fixed;
+    top: -110%;
+    width: 300%;
+    z-index: 0;
+
+}
+
+a {
+    color: white;
+    padding-right: 10px;
+}
+
+@keyframes grain {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    10% {
+        transform: translate(-5%, -10%);
+    }
+
+    20% {
+        transform: translate(-15%, 5%);
+    }
+
+    30% {
+        transform: translate(7%, -25%);
+    }
+
+    40% {
+        transform: translate(-5%, 25%);
+    }
+
+    50% {
+        transform: translate(-15%, 10%);
+    }
+
+    60% {
+        transform: translate(15%, 0%);
+    }
+
+    70% {
+        transform: translate(0%, 15%);
+    }
+
+    80% {
+        transform: translate(3%, 35%);
+    }
+
+    90% {
+        transform: translate(-10%, 10%);
+    }
+}
+
+.container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    font-weight: 200;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-title>h2 {
+    margin-bottom: 15px !important;
+    font-size: 4em;
+}
+
+.sub>p {
+    margin-top: 0 !important;
+    letter-spacing: 15px;
+    margin-bottom: 20px !important;
 }
 
 body {
-    background: url('./img/background.jpg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    overflow: hidden;
     width: 100%;
     height: 100vh;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
-.bulb img {
-    width: 30vw;
+.anim,
+.anim svg {
+    opacity: 0.8;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.anim path {
+    stroke-width: 2;
+}
+
+
+.footer {
     position: absolute;
-    left: 9%;
-    transform: rotate(10deg);
-    top: 1000px;
-    animation: mymove infinite alternate 5s;
+    font-size: 0.8rem;
+    bottom: 0;
+    right: 2%;
 }
-
-.cloud {
-    position: absolute;
-    left: -30%;
-    bottom: -80%;
-}
-
-.cloud2 {
-    position: absolute;
-    left: -9%;
-    top: 90%;
-    width: 2000px;
-    height: 3000px;
-    ;
-}
-
-.dot {
-    width: 1px;
-    height: 1px;
-    position: absolute;
-    top: 20%;
-    left: 6%;
-}
-
-.dot2 {
-    width: 1px;
-    height: 1px;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-}
-
-.dot4 {
-    width: 1px;
-    height: 1px;
-    position: absolute;
-    top: 10%;
-    left: 70%;
-}
-
-.dot3 {
-    width: 1px;
-    height: 1px;
-    position: absolute;
-    top: 40%;
-    left: 40%;
-}
-
-.ml16 {
-    color: rgb(255, 255, 255);
-    padding: 40px 0;
-    font-weight: 600;
-    font-family: 'ONEDAY', cursive;
-    font-size: 4em;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    overflow: hidden;
-}
-
-.ml16 .letter {
-    display: inline-block;
-    line-height: 1em;
-}
-
-.ml17 {
-    color: rgb(255, 255, 255);
-    padding: 40px 0;
-    font-weight: 600;
-    font-family: 'Righteous', cursive;
-    font-size: 1em;
-    text-transform: uppercase;
-    letter-spacing: 3em;
-    overflow: hidden;
-}
-
-.ml17 .letter {
-    display: inline-block;
-    line-height: 1em;
-}
-
-.ml18 {
-    color: rgb(255, 255, 255);
-    padding: 40px 0;
-    font-weight: 200;
-    font-family: 'Teko', sans-serif;
-    font-size: 1.3em;
-    text-transform: uppercase;
-    letter-spacing: 1em;
-    overflow: hidden;
-}
-
-.ml18 .letter {
-    display: inline-block;
-    line-height: 1em;
-}
-
-.title-pos {
-    position: absolute;
-    top: 5%;
-    right: 5%;
-
-}
-
-.title-pos2 {
-    position: absolute;
-    top: 20%;
-    right: 6%;
-}
-
-.title-pos3 {
-    position: absolute;
-    top: 40%;
-    right: 13.4%;
-}
-
-
-.social-icons {
-    position: absolute;
-    top: 80%;
-    right: -5%;
-}
-
-.icon {
-    color: #fff;
-    font-size: 1.5em;
-    padding: 10px;
-}
-
-.icon:hover {
-    color: rgb(255, 149, 202);
-
-}
-
-.dev {
-    font-family: Righteous;
-    font-weight: 200;
-    letter-spacing: 0.2em;
-    position: absolute;
-    bottom: -2%;
-    font-size: 0.7em;
-    right: -1%;
-    transform: translate(-50%, -50%);
-    color: rgb(255, 255, 255);
-}
-
-
-@keyframes mymove {
-    0% {
-        top: 1020px;
-    }
-
-    50% {
-        top: 1050px;
-    }
-
-    100% {
-        top: 1020px;
-    }
-}
-
 
 @media (max-width: 800px) {
-    .cloud {
-        max-width: 100px;
-        left: -50%;
-        bottom: -105%;
+
+
+    .container {
+        font-size: 1rem;
     }
 
-    .cloud2 {
-        max-width: 100px;
-        left: -190%;
-        top: 90%;
+    .main-title>h2 {
+        font-size: 1.5em;
     }
 
-    .bulb img {
-        width: 200px;
-        left: 20%;
-        margin-top: 200px;
-        animation: mymove infinite alternate 5s;
+    .sub>p {
+        font-size: 10px;
+        letter-spacing: 4px;
     }
 
-    .ml16 {
-        font-size: 1.4em;
-        width: 90%;
-        margin: auto;
-        text-align: center;
-        letter-spacing: 0.2em;
+    a {
+        font-size: 12px;
     }
 
-    .title-pos {
-        left: 11%;
-        top: 230px;
-    }
-
-    .ml17 {
-        font-size: 0.6em;
-        top: 265px;
-        letter-spacing: 1.2em;
-        font-weight: 200;
-        text-align: center;
-        left: 20%;
-
-    }
-
-    .ml18 {
-        font-weight: 200;
-        font-size: 0.9em;
-        letter-spacing: 1em;
-        left: 25%;
-        letter-spacing: 0.2em;
-        text-align: center;
-        top: 330px;
-    }
-
-    .text {
-        position: relative;
-        top: -55%;
-        left: -5%;
-    }
-
-    .social-icons {
-        position: absolute;
-        top: 65%;
-        right: -22%;
-    }
-
-    .social-icons>* {
-        color: #fff;
-    }
-
-    .dev {
-        display: none;
-    }
-
-    .text {
-        margin-top: 10%;
-    }
-}
-
-@keyframes mymoveS {
-    0% {
-        top: 1190px !important;
-    }
-
-    50% {
-        top: 1200px !important;
-    }
-
-    100% {
-        top: 1190px !important;
+    .anim,
+    .anim svg {
+        opacity: 1;
     }
 }

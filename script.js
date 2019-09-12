@@ -1,162 +1,3 @@
-var intro = anime.timeline({
-    easing: 'easeOutExpo',
-    duration: 3000
-});
-
-
-intro
-    .add({
-        targets: '.cloud',
-        translateY: -370,
-        duration: 1000
-    })
-    .add({
-        targets: '.cloud2',
-        translateY: -290,
-        duration: 500
-    })
-    .add({
-        targets: '.bulb',
-        translateY: -1000,
-        duration: 1300
-    })
-
-//dot animation
-if (window.innerWidth > 800) {
-    anime({
-        targets: '.dot',
-        scale: 40,
-        duration: 1300,
-        delay: 900,
-        direction: 'alternate',
-        loop: true
-    })
-    anime({
-        targets: '.dot2',
-        scale: 20,
-        duration: 1300,
-        delay: 500,
-        direction: 'alternate',
-        loop: true
-    })
-    anime({
-        targets: '.dot3',
-        scale: 15,
-        duration: 1300,
-        delay: 200,
-        direction: 'alternate',
-        loop: true
-    })
-    anime({
-        targets: '.dot4',
-        scale: 21,
-        duration: 1300,
-        delay: 200,
-        direction: 'alternate',
-        loop: true
-    })
-} else {
-    anime({
-        targets: '.dot',
-        scale: 6,
-        duration: 1300,
-        delay: 900,
-        direction: 'alternate',
-        loop: true
-    })
-    anime({
-        targets: '.dot2',
-        scale: 5,
-        duration: 1300,
-        delay: 500,
-        direction: 'alternate',
-        loop: true
-    })
-    anime({
-        targets: '.dot3',
-        scale: 6,
-        duration: 1300,
-        delay: 200,
-        direction: 'alternate',
-        loop: true
-    })
-    anime({
-        targets: '.dot4',
-        scale: 7,
-        duration: 1300,
-        delay: 200,
-        direction: 'alternate',
-        loop: true
-    })
-}
-
-
-// Wrap every letter in a span
-var textWrapper = document.querySelector('.ml16');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-anime.timeline({
-
-    }).add({
-        delay: 1000
-    })
-    .add({
-        targets: '.ml16 .letter',
-        translateY: [-200, 0],
-        easing: "easeOutExpo",
-        duration: 1400,
-        delay: (el, i) => 30 * i
-    })
-
-var textWrapper = document.querySelector('.ml17');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-anime.timeline({
-
-    }).add({
-        delay: 1000
-    })
-    .add({
-        targets: '.ml17 .letter',
-        translateY: [-200, 0],
-        easing: "easeOutExpo",
-        duration: 1400,
-        delay: (el, i) => 30 * i
-    })
-var textWrapper = document.querySelector('.ml18');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-anime.timeline({
-
-    }).add({
-        delay: 5000
-    })
-    .add({
-        targets: '.ml18 .letter',
-        translateY: [-200, 0],
-        easing: "easeOutExpo",
-        duration: 1400,
-        delay: (el, i) => 30 * i
-    })
-//icons
-let t2 = anime.timeline({
-    easing: 'easeOutElastic',
-    duration: 500
-});
-
-t2.add({
-    targets: '#icon1',
-    duration: 900,
-    opacity: [0, 100],
-    translateX: -100
-}).add({
-    targets: '#icon2',
-    duration: 900,
-    opacity: [0, 100],
-    translateX: -100
-})
-
-
 //counter
 
 setTimeout(() => {
@@ -189,8 +30,35 @@ setTimeout(() => {
     }, 1000);
 }, 2100)
 
-//particles
-const particlesJS = window.particlesJS
-particlesJS.load('particles-js', './particlesjs-config.json', function () {
-    console.log('callback - particles.js config loaded');
-});
+//baffel
+function bff() {
+    const text = baffle(".one");
+    text.set({
+        speed: 200
+    });
+    text.start();
+    text.reveal(2000);
+}
+bff();
+setInterval(function () {
+    bff();
+}, 4000)
+
+
+
+var pathEls = document.querySelectorAll('path');
+for (var i = 0; i < pathEls.length; i++) {
+    var pathEl = pathEls[i];
+    var offset = anime.setDashoffset(pathEl);
+    pathEl.setAttribute('stroke-dashoffset', offset);
+    anime({
+        targets: pathEl,
+        strokeDashoffset: [offset, 0],
+        duration: anime.random(1000, 5000),
+        delay: anime.random(1000, 5000),
+        loop: true,
+        direction: 'alternate',
+        easing: 'easeInOutSine',
+        autoplay: true
+    });
+}
