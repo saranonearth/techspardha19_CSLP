@@ -122,7 +122,14 @@ body {
     position: absolute;
     font-size: 0.8rem;
     bottom: 0;
+    text-align: center;
     right: 2%;
+}
+
+.tslogo {
+    width: 30px;
+    height: 30px;
+    margin-bottom: -10px;
 }
 
 @media (max-width: 800px) {
