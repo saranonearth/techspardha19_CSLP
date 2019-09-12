@@ -134,6 +134,7 @@ body {
     position: absolute;
     top: 5%;
     right: 5%;
+
 }
 
 .title-pos2 {
@@ -224,7 +225,7 @@ body {
 
     .title-pos {
         left: 11%;
-        top: 220px;
+        top: 230px;
     }
 
     .ml17 {
@@ -265,6 +266,10 @@ body {
 
     .dev {
         display: none;
+    }
+
+    .text {
+        margin-top: 10%;
     }
 }
 
